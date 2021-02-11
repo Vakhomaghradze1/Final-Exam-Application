@@ -20,11 +20,12 @@ class MainActivity : AppCompatActivity() {
     )
 
     private val userList = listOf<User>(
-        User("Jack", "Richer",32),
-        User("Michael", "Carter",29),
-        User("Kevin", "Durant",31),
-        User("Logan", "Noble",61),
-        User("Donovan", "Mitchel",25)
+        User("Monday", "Activities",1),
+        User("Tuesday", "Activities",2),
+        User("Wednesday", "Activities",3),
+        User("Thursday", "Activities",4),
+        User("Friday", "Activities",5)
+
     )
 
 
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         mainListView.adapter = ListViewAdapter(this, userList)
 
         mainListView.setOnItemClickListener { _, _, position, _ ->
-            Toast.makeText(this, "Forwarded To Personal Page", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Forwarding to To-Do page", Toast.LENGTH_SHORT).show()
 
             val personalPgIntent = Intent(this, UserDetailedPage::class.java)
             personalPgIntent.putExtra(Constantebi.USER_NAME_KEY, userNames[position])

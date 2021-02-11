@@ -30,16 +30,9 @@ class ListViewAdapter(private val xContext: Context, private val dataSource: Lis
         val positionView =  layout.findViewById<TextView>(R.id.listViewPositionView);
 
         nameTextView.text = "${dataSource[position].name} ${dataSource[position].lastName}"
-        positionView.text = "Age: ${dataSource[position].age}"
+        positionView.text = "Number: ${dataSource[position].age}"
 
         return layout
-//        val txtView = TextView(xContext);
-//        txtView.text = dataSource[position];
-//
-//        txtView.setTextColor(Color.WHITE);
-//        txtView.setPadding(25, 25, 25, 25);
-//
-//        return txtView
     }
 
 }
